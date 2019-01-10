@@ -510,17 +510,16 @@ aJsonStream::skip()
 // Utility to flush our buffer in case it contains garbage
 // since the parser will return the buffer untouched if it
 // cannot understand it.
-int
+void
 aJsonStream::flush()
 {
-  int in = this->getch();
-  while(in != EOF)
-  {
-    in = this->getch();
-  }
-  return EOF;
+int in = this->getch();
+while(in != EOF)
+{
+in = this->getch();
 }
-
+// return EOF;
+}
 
 // Parse an object - create a new root, and populate.
 aJsonObject*

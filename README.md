@@ -29,9 +29,9 @@ aJson is the attempt to port a complete JSON implementation to Arduino. It is ba
 
 - The code has very limited support on ATmega168 - there is just not enough memory and 
   memory fragmentation is a serious problem
-- Arrays and Lists are max 255 elements big
+- Arrays and Lists are max 256 elements big
 - There is no proper Unicode handling in this code
-- There is an internal buffer eating up 256 bytes of ram
+- There is an internal buffer eating up 4096 bytes of ram
 
 Most of the limitation will be gone in one of the future releases.
 

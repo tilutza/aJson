@@ -48,7 +48,7 @@
 #define EOF -1
 #endif
 
-#define PRINT_BUFFER_LEN 256
+#define PRINT_BUFFER_LEN 4096
 
 // The aJson structure:
 typedef struct aJsonObject {
@@ -89,7 +89,7 @@ public:
 	int printString(aJsonObject *item);
 
 	int skip();
-	int flush();
+	void flush();
 
 	int parseValue(aJsonObject *item, char** filter);
 	int printValue(aJsonObject *item);
